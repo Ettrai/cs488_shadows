@@ -10,6 +10,10 @@
 		44CF00711A05943E00D587B9 /* plane.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = 44CF00701A05943200D587B9 /* plane.obj */; };
 		44CF00731A05952200D587B9 /* objload.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 44CF00721A05950E00D587B9 /* objload.h */; };
 		44CF00751A059B2C00D587B9 /* room.obj in CopyFiles */ = {isa = PBXBuildFile; fileRef = 44CF00741A059B1A00D587B9 /* room.obj */; };
+		44CF00781A05A46700D587B9 /* shadow.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 44CF00761A05A45F00D587B9 /* shadow.fsh */; };
+		44CF00791A05A46700D587B9 /* shadow.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 44CF00771A05A45F00D587B9 /* shadow.vsh */; };
+		44EF79341A06ACF50071606E /* scene.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 44EF79311A06A26A0071606E /* scene.fsh */; };
+		44EF79351A06ACF50071606E /* scene.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 44EF79331A06A2730071606E /* scene.vsh */; };
 		92285B5F19BF38E900E296A6 /* Lighting.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92285B5D19BF38E900E296A6 /* Lighting.mm */; };
 		92285B6619BF3A0100E296A6 /* phong.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92285B6219BF39F300E296A6 /* phong.fsh */; };
 		92285B6719BF3A0100E296A6 /* phong.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92285B6319BF39F300E296A6 /* phong.vsh */; };
@@ -44,6 +48,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				44EF79341A06ACF50071606E /* scene.fsh in CopyFiles */,
+				44EF79351A06ACF50071606E /* scene.vsh in CopyFiles */,
+				44CF00781A05A46700D587B9 /* shadow.fsh in CopyFiles */,
+				44CF00791A05A46700D587B9 /* shadow.vsh in CopyFiles */,
 				44CF00751A059B2C00D587B9 /* room.obj in CopyFiles */,
 				44CF00731A05952200D587B9 /* objload.h in CopyFiles */,
 				44CF00711A05943E00D587B9 /* plane.obj in CopyFiles */,
@@ -58,6 +66,10 @@
 		44CF00701A05943200D587B9 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plane.obj; sourceTree = "<group>"; };
 		44CF00721A05950E00D587B9 /* objload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objload.h; sourceTree = "<group>"; };
 		44CF00741A059B1A00D587B9 /* room.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = room.obj; sourceTree = "<group>"; };
+		44CF00761A05A45F00D587B9 /* shadow.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shadow.fsh; sourceTree = "<group>"; };
+		44CF00771A05A45F00D587B9 /* shadow.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shadow.vsh; sourceTree = "<group>"; };
+		44EF79311A06A26A0071606E /* scene.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = scene.fsh; path = resources/scene.fsh; sourceTree = SOURCE_ROOT; };
+		44EF79331A06A2730071606E /* scene.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = scene.vsh; path = resources/scene.vsh; sourceTree = SOURCE_ROOT; };
 		92285B5D19BF38E900E296A6 /* Lighting.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Lighting.mm; sourceTree = "<group>"; };
 		92285B6219BF39F300E296A6 /* phong.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = phong.fsh; path = resources/phong.fsh; sourceTree = SOURCE_ROOT; };
 		92285B6319BF39F300E296A6 /* phong.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = phong.vsh; path = resources/phong.vsh; sourceTree = SOURCE_ROOT; };
@@ -210,10 +222,14 @@
 		92E3F2C61904AE2C006B9CD4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				44CF00761A05A45F00D587B9 /* shadow.fsh */,
+				44CF00771A05A45F00D587B9 /* shadow.vsh */,
 				44CF00701A05943200D587B9 /* plane.obj */,
 				44CF00741A059B1A00D587B9 /* room.obj */,
 				92285B6219BF39F300E296A6 /* phong.fsh */,
 				92285B6319BF39F300E296A6 /* phong.vsh */,
+				44EF79311A06A26A0071606E /* scene.fsh */,
+				44EF79331A06A2730071606E /* scene.vsh */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;

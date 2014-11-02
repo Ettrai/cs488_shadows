@@ -12,6 +12,8 @@ void main() {
   
   //get the vertex position in CAMERA coordinates
   vec4 position = view * model * vertexPosition;
+    
+    vec4 positionNo = model * vertexPosition;
 
   //just use xyz to calculate vectors between vertex, light, and camera
   vec3 P = position.xyz;
@@ -25,6 +27,8 @@ void main() {
   
   //get the normalized vectors from each light position to the vertex positions
   L1 = vec3(normalize(L1_cam - position).xyz);
+    //L1 = vec3(normalize(l1_position - positionNo).xyz);
+    
 //  L2 = vec3(normalize(L2_cam - position).xyz);
   
   

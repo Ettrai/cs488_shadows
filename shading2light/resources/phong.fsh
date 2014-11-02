@@ -3,6 +3,7 @@
 
 uniform vec3 ambient;
 uniform vec3 l1_diffuse, l1_specular;
+uniform float threshold;
 //uniform vec3 l2_diffuse, l2_specular;
 in vec3 V, N, L1/*, L2*/;
 float spec_intensity = 32.0;
@@ -54,7 +55,14 @@ void main(){
 //  } else {
 //    outColor2 = clamp(vec4(color2,1.0), 0.0,1.0);
 //  }
+    
+    float lightOnX = dot(normalize(L1),normalize(vec3(0.0,0.0,1.0)));
+    if(lightOnX > threshold){
+        frag = clamp(vec4(ambient, 1.0) + outColor1 /*+ outColor2*/, 0.0, 1.0); //add the two lights together, make sure final value is between 0.0 and 1.0
+    }else{
+        frag = clamp(vec4(ambient,1.0), 0.0,1.0);
+    }
   
-  frag = clamp(vec4(ambient, 1.0) + outColor1 /*+ outColor2*/, 0.0, 1.0); //add the two lights together, make sure final value is between 0.0 and 1.0
+  //frag = clamp(vec4(ambient, 1.0) + outColor1 /*+ outColor2*/, 0.0, 1.0); //add the two lights together, make sure final value is between 0.0 and 1.0
   
 }
